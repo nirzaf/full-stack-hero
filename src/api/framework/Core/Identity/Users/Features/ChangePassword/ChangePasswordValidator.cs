@@ -14,5 +14,9 @@ public class ChangePasswordValidator : AbstractValidator<ChangePasswordCommand>
         RuleFor(p => p.ConfirmNewPassword)
             .Equal(p => p.NewPassword)
                 .WithMessage("passwords do not match.");
+
+        RuleFor(p => p.OldPassword)
+            .NotEmpty()
+            .WithMessage("Old password is required.");
     }
 }
