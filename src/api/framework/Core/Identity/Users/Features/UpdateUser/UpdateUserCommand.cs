@@ -9,6 +9,7 @@ public class UpdateUserCommand : IRequest
     public string? LastName { get; set; }
     public string? PhoneNumber { get; set; }
     public string? Email { get; set; }
+    public string? ConfirmEmail { get; set; }
     public FileUploadCommand? Image { get; set; }
     public bool DeleteCurrentImage { get; set; }
 }
